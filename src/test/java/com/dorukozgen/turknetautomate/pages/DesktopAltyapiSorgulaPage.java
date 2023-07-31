@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class AltyapiSorgulaPage {
+public class DesktopAltyapiSorgulaPage {
 
     @FindBy(xpath = "//div[@id='formTab']/label/div")
     WebElement ilDropdown;
@@ -45,7 +45,7 @@ public class AltyapiSorgulaPage {
 
     By errorMessageBy = By.xpath("//*[@id=\"__next\"]/div/div[2]/div[1]/div[1]/div/div[4]/div/div");
 
-    public AltyapiSorgulaPage() {
+    public DesktopAltyapiSorgulaPage() {
         PageFactory.initElements(DesktopDriverManagement.getInstance().getDriver(), this);
     }
 

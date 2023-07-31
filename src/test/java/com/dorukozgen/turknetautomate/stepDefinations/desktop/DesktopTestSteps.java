@@ -1,26 +1,22 @@
 package com.dorukozgen.turknetautomate.stepDefinations.desktop;
 
-import com.dorukozgen.turknetautomate.pages.AltyapiSonucPage;
-import com.dorukozgen.turknetautomate.pages.AltyapiSorgulaPage;
-import com.dorukozgen.turknetautomate.pages.MainPage;
+import com.dorukozgen.turknetautomate.pages.DesktopAltyapiSonucPage;
+import com.dorukozgen.turknetautomate.pages.DesktopAltyapiSorgulaPage;
+import com.dorukozgen.turknetautomate.pages.DesktopMainPage;
 import com.dorukozgen.turknetautomate.utils.DesktopDriverManagement;
-import dev.failsafe.internal.util.Assert;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class TurkNetTest {
+public class DesktopTestSteps {
 
-    MainPage mainPageObject;
-    AltyapiSorgulaPage altyapiSorgulaPageObject;
-    AltyapiSonucPage altyapiSonucPageObject;
+    DesktopMainPage mainPageObject;
+    DesktopAltyapiSorgulaPage altyapiSorgulaPageObject;
+    DesktopAltyapiSonucPage altyapiSonucPageObject;
 
     @Given("{string} websitesine git")
     public void website_git(String url) {
@@ -43,7 +39,7 @@ public class TurkNetTest {
 
     @Given("\"Altyapı Sorgula\" butonuna tıkla")
     public void altyapi_sorgula_butonuna_bas() {
-        mainPageObject = new MainPage();
+        mainPageObject = new DesktopMainPage();
         mainPageObject.clickAltYapiSorgulaButton();
     }
 
@@ -59,7 +55,7 @@ public class TurkNetTest {
                 }
         );
 
-        altyapiSorgulaPageObject = new AltyapiSorgulaPage();
+        altyapiSorgulaPageObject = new DesktopAltyapiSorgulaPage();
     }
 
     @Then("\"İl\" alanından \"İSTANBUL\" seç")
@@ -118,7 +114,7 @@ public class TurkNetTest {
                 }
         );
 
-        altyapiSonucPageObject = new AltyapiSonucPage();
+        altyapiSonucPageObject = new DesktopAltyapiSonucPage();
     }
 
     @Then("Altyapı bilgileri görüntülenir")

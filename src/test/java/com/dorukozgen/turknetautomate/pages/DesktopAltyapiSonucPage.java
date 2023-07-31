@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AltyapiSonucPage {
+public class DesktopAltyapiSonucPage {
 
     @FindBy(xpath = "/html/body/div[3]/div[3]/div/div/main/div/div/section[1]/div/div[1]/div/div[12]/div/div/a")
     WebElement altyapiSonucTitle;
 
-    public AltyapiSonucPage() {
+    public DesktopAltyapiSonucPage() {
         PageFactory.initElements(DesktopDriverManagement.getInstance().getDriver(), this);
     }
 
